@@ -13,7 +13,7 @@ namespace TaskManager.Domain.Interfaces
         Task<IEnumerable<Entities.Task>> GetByProjectIdAsync(Guid projectId);
         Task<Entities.Task> CreateAsync(Entities.Task task);
         Task<Entities.Task> UpdateAsync(Entities.Task task);
-        Entities.Task DeleteAsync(Guid id);
+        System.Threading.Tasks.Task DeleteAsync(Guid id);
         Task<bool> ExistsAsync(Guid id);
         Task<int> GetCompletedTasksCountByUserAsync(Guid userId, DateTime fromDate, DateTime toDate);
         Task<IEnumerable<Entities.Task>> GetOverdueTasksAsync();
