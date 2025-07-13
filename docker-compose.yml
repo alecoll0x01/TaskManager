@@ -4,3 +4,18 @@ services:
     build:
       context: .
       dockerfile: TaskManager/Dockerfile
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: TaskManagementDb
+      POSTGRES_USER:    
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - taskmanagement-network
+
+volumes:
+  postgres_data:

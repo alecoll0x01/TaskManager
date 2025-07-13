@@ -12,7 +12,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["TaskManager/TaskManager.API.csproj", "TaskManager/"]
+COPY ["src/TaskManagement.API/TaskManagement.API.csproj", "src/TaskManagement.API/"]
+COPY ["src/TaskManagement.Application/TaskManagement.Application.csproj", "src/TaskManagement.Application/"]
+COPY ["src/TaskManagement.Domain/TaskManagement.Domain.csproj", "src/TaskManagement.Domain/"]
+COPY ["src/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj", "src/TaskManagement.Infrastructure/"]
 RUN dotnet restore "./TaskManager/TaskManager.API.csproj"
 COPY . .
 WORKDIR "/src/TaskManager"
