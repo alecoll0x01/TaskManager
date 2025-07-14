@@ -13,7 +13,6 @@ O projeto segue os princípios de Clean Architecture com DDD, separando as respo
 ├── 📁 TaskManagement.Domain/          # Camada de Domínio (Entidades, Value Objects, Domain Events)
 ├── 📁 TaskManagement.Application/     # Camada de Aplicação (Use Cases, DTOs, Handlers)
 ├── 📁 TaskManagement.Infrastructure/  # Camada de Infraestrutura (Repositórios, DbContext)
-└── 📁 TaskManagement.API/            # Camada de Apresentação (Controllers, Middleware)
 ```
 
 ### Conceitos Aplicados
